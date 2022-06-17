@@ -1,6 +1,6 @@
 /** BEGIN_JUCE_MODULE_DECLARATION
 
-    ID:            laplacianaudio_utils
+    ID:             laplacianaudio_utils
     vendor:         Laplacian Audio
     version:        0.1.0
     name:           Laplacian Audio Utils
