@@ -1,2 +1,2 @@
-# juce_laplacianaudioutils
+# JUCELaplacianAudioUtils
 JUCE Utils by Laplacian Audio
