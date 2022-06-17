@@ -10,6 +10,10 @@ Clone this repo and import the module (folder) 'laplacianaudio_utils' into your 
 ATM the following namespaces are available:
 - la_utils_network
 
+## Examples
+By now, you can find a working example for the LANetworkManager class. You can look inside the 'Examples' 
+folder.
+
 <br />
 
 Create an instance of a class like the following:
