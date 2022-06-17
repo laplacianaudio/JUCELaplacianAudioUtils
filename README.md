@@ -4,7 +4,7 @@
 Laplacian Audio JUCE Utils is a library of higher-level APIs in order to make life easier with certain JUCE tasks.
 
 ## Installation
-Clone this repo and import the moudule (folder) 'laplacianaudio_utils' from your Projucer project.
+Clone this repo and import the module (folder) 'laplacianaudio_utils' into your Projucer project.
 
 ## How to use
 ATM the following namespaces are available:
