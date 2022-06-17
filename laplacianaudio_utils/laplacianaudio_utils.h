@@ -6,7 +6,7 @@
     name:           Laplacian Audio Utils
     description:    JUCE Utils by Laplacian Audio
     website:        https://laplacianaudio.com
-    license:        Proprietary
+    license:        GPLv3
 
     dependencies:
 
