@@ -11,14 +11,9 @@ void la_utils_network::LANetworkManager::run()
 {
     auto result = getResultText (mUrlString);
 
-    DBG("NLP Engine: " + result);
-    if (result != "KO" &&
-        !result.contains("KOStatusCode") &&
-        result != "KONetwork" &&
-        !result.contains("error"))
-    {
-        mRequestCallback(result);
-    }
+    DBG("Response from BE: " + result);
+     mRequestCallback(result);
+    
     
 }
 

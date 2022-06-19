@@ -1,0 +1,14 @@
+{
+  "name": "lanetworkmanager-example-projects-be",
+  "version": "0.1.0",
+  "description": "LANetworkManager Example Projects BE",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Gazzaruso (Laplacian Audio)",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

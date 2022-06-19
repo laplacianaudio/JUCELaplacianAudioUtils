@@ -58,6 +58,8 @@ profile
 **/Examples/**/doxygen/doc
 **/Examples/**/doxygen/build
 **/Examples/**/.idea
+**/Examples/**/package-lock.json
+**/Examples/**/BE/node_modules
 extras/Projucer/JUCECompileEngine.dylib
 
 .idea
