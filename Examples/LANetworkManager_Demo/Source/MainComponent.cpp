@@ -13,21 +13,25 @@ MainComponent::MainComponent()
     mTextEditor->setHasFocusOutline(false);
     
     mTextButton = std::make_unique<TextButton>();
-    mTextButton->setButtonText("Make Remote Fetch API Request");
+    mTextButton->setButtonText("Check for Updates on BE");
     mTextButton->onClick = [this] {
-        mNetworkManager->setUrlString("https://jsonplaceholder.typicode.com/todos/" + String(getCounter()));
+        mNetworkManager->setUrlString("http://localhost:3000/check-update");
         mNetworkManager->makeFetchRequest([this] (String result) {
             DBG(result);
             setResult(result);
-            this->incrementCounter();
         });
     };
+
+    mUpdateLabel = std::make_unique<Label>();
+    mUpdateLabel->setText("Updates Available!", dontSendNotification);
+    mUpdateLabel->setColour(Label::ColourIds::textColourId, Colours::red);
+    mUpdateLabel->setJustificationType(Justification::Justification::centredRight);
     
     addAndMakeVisible(mTextEditor.get());
     addAndMakeVisible(mTextButton.get());
-    
-    startTimer(1000);
-    
+    addChildComponent(mUpdateLabel.get());
+
+    startTimer(1000); 
 }
 
 MainComponent::~MainComponent()
@@ -37,7 +41,13 @@ MainComponent::~MainComponent()
 void MainComponent::timerCallback()
 {
     mTextEditor->setText(getResult());
-    repaint();
+    /* Result == 0 -> No Updates; Result == 1 -> Updates Available **/
+    if (getResult() == "1")
+    {
+        mUpdateLabel->setVisible(true);
+
+        /* Here you could write your custom BL if Updates are/aren't available **/
+    }
 }
 
 //==============================================================================
@@ -51,6 +61,8 @@ void MainComponent::paint (juce::Graphics& g)
     mTextEditor->applyFontToAllText(getLocalBounds().getWidth() * 0.03);
     
     mTextButton->setBounds(getWidth() * 0.05, getHeight() * 0.85, getWidth() * 0.9, getHeight() * 0.10);
+
+    mUpdateLabel->setBounds(0, 0, getWidth(), getHeight() * 0.05);
 }
 
 void MainComponent::resized()

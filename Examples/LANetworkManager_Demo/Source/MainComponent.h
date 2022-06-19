@@ -23,20 +23,17 @@ public:
     
     String getResult() { return mResult; }
     void setResult(String inResult) { mResult = inResult; }
-    
-    int getCounter() { return mCounter; }
-    void incrementCounter() { mCounter++; }
 
 private:
     //==============================================================================
     // Your private member variables go here...
     std::unique_ptr<TextEditor> mTextEditor;
     std::unique_ptr<TextButton> mTextButton;
+    std::unique_ptr<Label> mUpdateLabel;
     
     void timerCallback() override;
     
     String mResult = "";
-    int mCounter = 1;
     
     std::unique_ptr<la_utils_network::LANetworkManager> mNetworkManager;
 
