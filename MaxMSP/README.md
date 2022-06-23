@@ -40,6 +40,7 @@ void la_utils_maxmsp::LAGenManager::setParameter(long in_paramIndex, float in_pa
 ```
 
 ## Known issues / caveat
+- By now, usage is limited to mono/stereo channel configuration projects
 - Actually the Gen Manager uses malloc() at every prepareToPlay() call. A more clever version will be updated, handling with realloc(). 
 - Not all the gen~ exported code APIs are yet implemented/exposed
 - Because LAGenManager uses gen~ libraries/types, if you import LAGenManager without importing gen~ code, you project will not compile.
