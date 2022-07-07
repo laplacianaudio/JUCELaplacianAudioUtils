@@ -2,7 +2,7 @@
 
     ID:             laplacianaudio_utils
     vendor:         Laplacian Audio
-    version:        0.1.0
+    version:        0.1.1
     name:           Laplacian Audio Utils
     description:    JUCE Utils by Laplacian Audio
     website:        https://laplacianaudio.com
@@ -21,3 +21,7 @@
 
 /** Laplacian Audio Utils Network */
 #include "la_utils_network/LANetworkManager.h"
+
+/** Laplacian GUI Utils */
+#include "la_utils_gui/LAKnob.h"
+#include "la_utils_gui/LAMainLookAndFeel.h"
